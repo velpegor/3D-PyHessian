@@ -1,8 +1,8 @@
-<img src="misc/twoModels.png" width="60%" height="60%">
+<img src="misc/twoModels.png" width="65%" height="65%">
 
 
 ## Introduction
-PyHessian은 Deep neural networks의 Hessian information을 빠르게 계산할 수 있는 library 입니다. Hessian information은 아래와 같은 요소들을 이야기하며, 이를 활용해 loss landscape 시각화하는 등 NNs를 분석하는 데 사용할 수 있습니다.
+PyHessian은 Deep neural networks의 Hessian information을 빠르게 계산할 수 있는 library 입니다. Hessian information은 아래와 같은 요소들을 이야기하며, 이를 활용해 loss landscape를 시각화하는 등 NNs를 분석하는 데 사용할 수 있습니다.
 
 - Top Hessian eigenvalues
 - The trace of the Hessian matrix
