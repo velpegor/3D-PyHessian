@@ -1,4 +1,4 @@
-![Block](misc/twoModels.png)
+<center><img src="misc/twoModels.png" width="50%" height="50%"></center>
 
 
 ## Introduction
