@@ -17,7 +17,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]="6"
 # get the model 
 model = VGG(activation_type='tanh', depth='16', cut_block=5, num_classes=100, oper_order='cab')
 model = nn.DataParallel(model)
-checkpoints = torch.load('/home/velpegor/workspace/3D-PyHessian/AGC5e-2_VGG11_tanh_cab_seed1_cifar100_0.0005_0.1_pth.tar')
+checkpoints = torch.load('model path')
 model.load_state_dict(checkpoints['state_dict'])
 
 # change the model to eval mode to disable running stats upate
@@ -58,14 +58,14 @@ loss_list = []
 # create a copy of the model
 model_perb1 = VGG(activation_type='tanh', depth='16', cut_block=5, num_classes=100, oper_order='cab')
 model_perb1 = nn.DataParallel(model_perb1)
-checkpoints_perb1 = torch.load('/home/velpegor/workspace/3D-PyHessian/AGC5e-2_VGG11_tanh_cab_seed1_cifar100_0.0005_0.1_pth.tar')
+checkpoints_perb1 = torch.load('model path')
 model_perb1.load_state_dict(checkpoints_perb1['state_dict'])
 model_perb1.eval()
 model_perb1 = model_perb1.cuda()
 
 model_perb2 = VGG(activation_type='tanh', depth='16', cut_block=5, num_classes=100, oper_order='cab')
 model_perb2 = nn.DataParallel(model_perb2)
-checkpoints_perb2 = torch.load('/home/velpegor/workspace/3D-PyHessian/AGC5e-2_VGG11_tanh_cab_seed1_cifar100_0.0005_0.1_pth.tar')
+checkpoints_perb2 = torch.load('model path')
 model_perb2.load_state_dict(checkpoints_perb2['state_dict'])
 model_perb2.eval()
 model_perb2 = model_perb2.cuda()
